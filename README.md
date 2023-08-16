@@ -1,5 +1,3 @@
-Absolutely. Here's the formatted README.md for the e-commerce page based on your requirements:
-
 ---
 
 # Frontend Mentor - E-commerce product page solution
@@ -35,7 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-./src/images/showcart.png
+![Alt text](./src/images/showcart.png)
+
 
 ### Links
 
