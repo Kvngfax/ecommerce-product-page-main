@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Alt text](./src/images/showcart.png)
+![Alt text](./src/images/showCart.png)
 
 
 ### Links
