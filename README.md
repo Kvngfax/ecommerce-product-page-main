@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/images/showcart.png)
+./src/images/showcart.png
 
 ### Links
 
