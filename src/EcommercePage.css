@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --black-lightbox: rgba(0, 0, 0, 0.75);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 1300px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navBar {
+    display: flex;
+    width: 1300px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+    border-bottom: 1px solid silver;
+    height: 60px;
+}
+
+.open {
+    display: none;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navBar ul:first-of-type {
+    position: relative;
+    right: 18%;
+    color: var(--dark-grayish-blue);
+    cursor: pointer;
+    height: 60px;
+
+}
+
+.navBar ul:first-of-type {
+    position: relative;
+    right: 18%;
+    color: var(--dark-grayish-blue);
+    cursor: pointer;
+    height: 60px;
+
+}
+
+.navBar ul:first-of-type li {
+    height: 50%;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navBar ul:first-of-type img {
+    display: none;
+}
+
+.navBar ul:first-of-type li:hover {
+    border-bottom: 4px solid var(--orange);
+    color: var(--black);
+}
+
+.navBar ul img {
+    width: 20%;
+    cursor: pointer;
+}
+
+.navBar ul:last-of-type {
+    padding-left: 0;
+    margin-right: 0;
+}
+
+.navBar img:first-of-type,
+.navBar ul:last-of-type {
+    position: relative;
+    bottom: 12%;
+}
+
+.navBar ul img:first-of-type {
+    width: 10%;
+    height: 10%;
+    position: relative;
+    /* top: 10px; */
+
+}
+
+.navBar ul:last-of-type {
+    justify-content: end;
+}
+
+.navBar ul:last-of-type img:last-of-type:hover {
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.navBar img.sneakers {
+    position: relative;
+    top: -6px;
+}
+
+
+
+
+.responsive-menu {
+    display: flex;
+}
+
+
+
+h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--orange);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.body2>p {
+    color: var(--black-lightbox);
+}
+
+.price {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+h3 {
+    padding-right: 10px;
+}
+
+.price p {
+    background-color: var(--pale-orange);
+    padding: 2px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--orange);
+    border-radius: 5px;
+}
+
+.original {
+    position: relative;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.body2 div:last-of-type {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.body2 .there {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.body2 div:last-of-type button:first-of-type {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 35%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--light-grayish-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.body2 div:last-of-type button:last-of-type {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 63%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--orange);
+    justify-content: center;
+    color: white;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.body2 div:last-of-type button:last-of-type:hover {
+    background-color: hsl(26, 100%, 68%);
+}
+
+.body2 div:last-of-type button:last-of-type img {
+    width: 8%;
+    fill: var(--white);
+    filter: invert(100%) sepia(100%) brightness(10);
+}
+
+button p {
+    font-weight: 700;
+}
+
+.fullScreenBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    /* semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* to ensure it's on top */
+    padding: 10px;
+}
+
+.fullScreenBackdrop .image {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Full width for both the main image and the thumbnails */
+    grid-template-rows: auto auto;
+    /* Adjust to your needs, 'auto' lets content size dictate */
+    gap: 20px;
+    /* Optional: spacing between main images and thumbnails */
+    align-items: center;
+    position: relative;
+    top: -6%;
+}
+
+.fullScreenBackdrop .image>div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* 3 columns: previous, main image, next */
+}
+
+.fullScreenBackdrop .smallImg {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 images in a row */
+    gap: 10px;
+    /* Optional: spacing between thumbnails */
+    margin-bottom: 100px;
+}
+
+/* Styles for the previous, next, and thumbnail images */
+.fullScreenBackdrop .image>div:first-child>img {
+    width: 100%;
+    /* Making sure they occupy full cell space */
+    cursor: pointer;
+    /* Indicate clickability */
+}
+
+.fullScreenBackdrop .smallImg {
+    width: 30%;
+    align-items: center;
+    position: relative;
+    left: 35%;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+/* This is to ensure the main image gets more space */
+.fullScreenBackdrop .image>div:first-child>img:nth-child(2) {
+    max-width: 70%;
+    /* or set it to a fixed pixel value */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.fullScreenBackdrop .image div:first-of-type img:first-of-type,
+.fullScreenBackdrop .image div:first-of-type img:last-of-type {
+    max-width: 10px;
+}
+
+.fullScreenBackdrop .image div:first-of-type img:first-of-type {
+    position: relative;
+    left: 80%;
+    top: 45%;
+}
+
+.fullScreenBackdrop .image div:first-of-type img:last-of-type {
+    position: relative;
+    right: 80%;
+    top: 45%;
+}
+
+.previous {
+    width: 10px;
+    /* Adjust as per the size of your image */
+    height: 10px;
+    /* Adjust as per the size of your image */
+    background-color: white;
+    border-radius: 50%;
+    /* Makes it circular */
+    display: block;
+    /* To make margins work for the image */
+    margin: 0 auto;
+    /* Center the image if its container is a flex container */
+    object-fit: cover;
+    /* Ensures that the image maintains its aspect ratio */
+    padding: 20px;
+}
+
+.next {
+    width: 10px;
+    /* Adjust as per the size of your image */
+    height: 10px;
+    /* Adjust as per the size of your image */
+    background-color: white;
+    border-radius: 50%;
+    /* Makes it circular */
+    display: block;
+    /* To make margins work for the image */
+    margin: 0 auto;
+    /* Center the image if its container is a flex container */
+    object-fit: cover;
+    /* Ensures that the image maintains its aspect ratio */
+    padding: 20px;
+}
+
+.fullScreenBackdrop .smallImg img {
+    border-radius: 10px;
+}
+
+.selectedImage {
+    position: relative;
+    border: 2px solid red;
+    border-radius: 5px;
+    fill: white;
+    opacity: 0.5;
+}
+
+/* .selectedImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.selectedImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); 
+    pointer-events: none;
+    z-index: 2;
+} */
+
+.cart {
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    width: 300px;
+    height: 80px;
+    background: var(--white);
+    /* semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1000;
+    /* to ensure it's on top */
+    padding: 20px;
+    box-shadow: -8px 16px 8px rgba(34, 34, 34, 0.2), 8px 16px 8px rgba(53, 53, 53, 0.2);
+    animation: fadeIn ease-in forwards 3s;
+    gap: 1rem;
+    border-radius: 5px;
+}
+
+.cart1 div {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+
+}
+
+.cart h1,
+.cart1 h1 {
+    color: var(--black);
+    font-weight: 700;
+
+    width: 100%;
+    padding-bottom: 1rem;
+
+}
+
+.cart1 div div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.cart1 div img {
+    width: 20%;
+    height: 80%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.cart1 div img:last-of-type {
+    width: 5%;
+    height: 25%;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.cart1 button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+}
+
+em {
+    font-weight: 700;
+}
+
+.cart1 h1::after,
+.cart h1::after {
+    content: "";
+    display: block;
+    width: calc(100% + 40px);
+    /* 100% + twice the padding of .cart */
+    height: 1px;
+    background-color: silver;
+    position: relative;
+    left: -20px;
+    /* shift it left by the amount of padding in .cart */
+    top: 1rem;
+
+}
+
+.cart1 {
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    width: 300px;
+    height: 180px;
+    background: var(--white);
+    /* semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1000;
+    /* to ensure it's on top */
+    padding: 20px;
+    box-shadow: -8px 16px 8px rgba(34, 34, 34, 0.2), 8px 16px 8px rgba(53, 53, 53, 0.2);
+    animation: fadeIn ease-in forwards 3s;
+    gap: 1rem;
+    border-radius: 5px;
+}
+
+.cart1 h1::after {
+    content: "";
+    display: block;
+    width: calc(100% + 40px);
+    /* 100% + twice the padding of .cart */
+    height: 1px;
+    background-color: silver;
+    position: relative;
+    left: -20px;
+    /* shift it left by the amount of padding in .cart */
+    top: 1rem;
+
+}
+
+.cart1 p {
+    font-size: 15px;
+}
+
+.cart1 h1 {
+    color: var(--black);
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 1rem;
+
+}
+
+.number {
+    position: relative;
+    bottom: 773px;
+    right: -577px;
+    z-index: 999;
+    /* to ensure it's on top */
+}
+
+.number p {
+    font-size: 9px;
+    width: 15px;
+    height: 12px;
+    background-color: var(--orange);
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    color: var(--white);
+}
+
+img.sneakers {
+    top: -15px;
+}
+
+@media screen and (min-width: 700px) {
+    .body {
+        display: flex;
+        padding: 50px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .body img {
+        border-radius: 10px;
+    }
+
+    /* .image > img:first-of-type{
+        width: auto;
+        height: 500px;
+    } */
+
+    /* Container styling */
+    div.image {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* divides the container into 4 equal columns */
+        grid-gap: 10px;
+        /* optional: if you want gaps between images */
+        height: 580px;
+    }
+
+    /* Large image styling */
+    div.image>img:first-child {
+        grid-column: 1 / span 4;
+        /* makes the image span across all 4 columns */
+        height: 500px;
+        object-fit: cover;
+    }
+
+    /* Small images styling */
+    div.smallImg {
+        display: contents;
+        /* makes the div act as if it's not there, allowing its children to be direct grid items */
+    }
+
+    div.smallImg>img {
+        width: 100%;
+        /* makes the image stretch to the width of its grid cell */
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .body2 {
+        padding: 100px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.8rem;
+        max-width: 450px;
+    }
+
+    .body2 div:last-of-type button:first-of-type {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 35%;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: var(--light-grayish-blue);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .body2 div:last-of-type button:last-of-type {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 63%;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--orange);
+        justify-content: center;
+        color: white;
+        gap: .5rem;
+        cursor: pointer;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        min-height: 0;
+        width: 385px;
+    }
+
+    .navBar {
+        display: flex;
+        width: 375px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px;
+        height: 60px;
+        margin-bottom: 0;
+    }
+
+
+    .navBar ul:first-of-type {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        width: 60vw;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 60px;
+
+    }
+
+    .navBar ul:first-of-type li {
+        height: 0%;
+        justify-content: flex-start;
+        align-self: flex-start;
+        text-align: start;
+        padding: 20px 6px;
+        margin-left: 20px;
+        color: var(--black);
+        font-weight: 700;
+    }
+
+    .navBar ul:first-of-type img {
+        position: relative;
+        top: -1px;
+
+        display: block;
+        width: 15px;
+        height: 15px;
+        left: 24px;
+    }
+
+    .navBar ul:last-of-type {
+        left: -10px;
+    }
+
+    .sneakers {
+        position: relative;
+        top: -8px;
+        left: -5px;
+    }
+
+    .open {
+        display: inline-block;
+        padding: 0 15px;
+        cursor: pointer;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .body img {
+        border-radius: 0;
+    }
+
+    /* Container styling */
+    div.image img {
+        display: flex;
+        height: 300px;
+        width: 100vw;
+
+    }
+
+    div.smallImg {
+        display: none;
+        /* makes the div act as if it's not there, allowing its children to be direct grid items */
+    }
+
+    .body2 {
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: .8rem;
+        max-width: 420px;
+    }
+
+    .body2 h2 {
+        font-size: 30px;
+    }
+
+    .cart1, .cart {
+        top: 95px;
+        right: 15px;
+    }
+
+    .body2 div:first-of-type {
+        display: flex;
+    }
+
+    .body2 div,
+    .body2 p {
+        display: inline;
+    }
+
+    .original {
+        align-self: center;
+    }
+
+    div.there {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        height: 70px;
+        margin-bottom: 40px;
+    }
+
+    .there button {
+        height: 50px;
+
+    }
+
+    .body2 div:last-of-type button:first-of-type {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: var(--light-grayish-blue);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .body2 div:last-of-type button:last-of-type {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--orange);
+        justify-content: center;
+        color: white;
+        gap: .5rem;
+        cursor: pointer;
+        padding: 10px 0;
+        margin-bottom: 40px;
+    }
+
+    .body2 div:last-of-type button:last-of-type img {
+        width: 4%;
+    }
+
+    .number {
+        position: relative;
+        bottom: 742px;
+        right: -106px;
+        z-index: 999;
+        /* to ensure it's on top */
+    }
+
+    .navBar {
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .responsive-menu {
+        display: none;
+    }
+
+    /* When menu is open, display the menu */
+    .menu-open .responsive-menu {
+        display: flex;
+    }
+
+    .responsive-menu.active {
+        display: flex !important;
+    }
+
+    .responsive-menu.show {
+        display: block;
+        /* Display when the 'show' class is added */
+    }
+
+    .responsive-menu {
+        display: none;
+        /* Default to hidden */
+    }
+
+}
